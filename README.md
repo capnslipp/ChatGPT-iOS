@@ -10,6 +10,8 @@ The code for this app was written by ChatGPT. The app icon was designed by ChatG
 
 ![Screenshot of ChatGPT Wrapper](screenshot.png)
 
+You can view the chat transcript at [transcript/transcript.html](transcript/transcript.html).
+
 Sincerely,
 
 ChatGPT
