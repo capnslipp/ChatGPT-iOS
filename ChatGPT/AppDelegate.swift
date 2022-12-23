@@ -1,36 +1,46 @@
-//
-//  AppDelegate.swift
-//  ChatGPT
-//
-//  Created by Cap'n Slipp on 12/23/22.
-//
-
 import UIKit
+import WebKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate, WKNavigationDelegate {
 
+    var window: UIWindow?
+    var webView: WKWebView!
 
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Set up the window and web view
+        window = UIWindow(frame: UIScreen.main.bounds)
+        webView = WKWebView(frame: window!.frame)
+        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // Add this line to set the autoresizing mask
+        webView.navigationDelegate = self
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
-		return true
-	}
+        // Create a view controller to contain the web view
+        let rootViewController = UIViewController()
+        rootViewController.view.addSubview(webView)
+        window!.rootViewController = rootViewController
 
-	// MARK: UISceneSession Lifecycle
+        // Load the website
+        let url = URL(string: "https://chat.openai.com")!
+        webView.load(URLRequest(url: url))
 
-	func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-		// Called when a new scene session is being created.
-		// Use this method to select a configuration to create the new scene with.
-		return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-	}
+        window!.makeKeyAndVisible()
+        return true
+    }
 
-	func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-		// Called when the user discards a scene session.
-		// If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-		// Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-	}
-
-
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping     (WKNavigationActionPolicy) -> Void) {
+        // Get the host of the URL
+        guard let host = navigationAction.request.url?.host else {
+            decisionHandler(.cancel)
+            return
+        }
+    
+        // Check the host of the URL and decide whether to allow it to be loaded in the app's web view or open it in Safari
+        switch host {
+        case "chat.openai.com", "auth0.openai.com", "www.recaptcha.net":
+            decisionHandler(.allow)
+        default:
+            UIApplication.shared.open(navigationAction.request.url!)
+            decisionHandler(.cancel)
+        }
+    }
 }
-
