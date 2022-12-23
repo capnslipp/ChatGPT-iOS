@@ -1,6 +1,5 @@
+<img src="AppLogo.svg" alt="AppLogo" width="76" height="76" align="left">
 # ChatGPT-iOS
-
-![AppLogo](AppLogo.svg)
 
 This is an iOS/iPadOS app that serves as a wrapper for the ChatGPT website at [chat.openai.com](https://chat.openai.com/). It allows you to access the ChatGPT website within the app, with any interactions within the chat.openai.com domain opening in the app's `WKWebView`. URLs loaded that aren't in the chat.openai.com domain will open in Safari.
 
