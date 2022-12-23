@@ -11,7 +11,7 @@
 		FA8982DA2955B0710075FE8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8982D92955B0710075FE8B /* SceneDelegate.swift */; };
 		FA8982DC2955B0710075FE8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8982DB2955B0710075FE8B /* ViewController.swift */; };
 		FA8982E12955B0750075FE8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8982E02955B0750075FE8B /* Assets.xcassets */; };
-		FA8982E42955B0750075FE8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8982E22955B0750075FE8B /* LaunchScreen.storyboard */; };
+		FA8982EC2955C9120075FE8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8982EB2955C9120075FE8B /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		FA8982D92955B0710075FE8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA8982DB2955B0710075FE8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA8982E02955B0750075FE8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA8982E32955B0750075FE8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8982E52955B0750075FE8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA8982EB2955C9120075FE8B /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				FA8982D92955B0710075FE8B /* SceneDelegate.swift */,
 				FA8982DB2955B0710075FE8B /* ViewController.swift */,
 				FA8982E02955B0750075FE8B /* Assets.xcassets */,
-				FA8982E22955B0750075FE8B /* LaunchScreen.storyboard */,
+				FA8982EB2955C9120075FE8B /* LaunchScreen.xib */,
 				FA8982E52955B0750075FE8B /* Info.plist */,
 			);
 			path = ChatGPT;
@@ -122,8 +122,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8982E42955B0750075FE8B /* LaunchScreen.storyboard in Resources */,
 				FA8982E12955B0750075FE8B /* Assets.xcassets in Resources */,
+				FA8982EC2955C9120075FE8B /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,17 +141,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FA8982E22955B0750075FE8B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA8982E32955B0750075FE8B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA8982E62955B0750075FE8B /* Debug */ = {
