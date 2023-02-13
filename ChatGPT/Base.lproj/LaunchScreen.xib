@@ -13,7 +13,7 @@
     </placeholder>
     <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     <view contentMode="scaleToFill" id="i5G-Hk-p0Y">
-      <color key="backgroundColor" red="1" green="0.7529411764705882" blue="0.03137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+      <color key="backgroundColor" red="0.062745098039216" green="0.63921568627451" blue="0.498039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
       <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
       <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
       <subviews>
