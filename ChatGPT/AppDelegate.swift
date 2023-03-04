@@ -36,9 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WKNavigationDelegate {
     
         // Check the host of the URL and decide whether to allow it to be loaded in the app's web view or open it in Safari
         switch host {
-        case "chat.openai.com", "auth0.openai.com", "www.recaptcha.net":
+        case "chat.openai.com", "auth0.openai.com", "platform.openai.com", "www.recaptcha.net",
+            "accounts.google.com",
+            "login.microsoftonline.com", "login.live.com", "account.live.com":
             decisionHandler(.allow)
         default:
+            print("ChatGPT.\(Self.self): Opening host “\(host)” in system browser.")
             UIApplication.shared.open(navigationAction.request.url!)
             decisionHandler(.cancel)
         }
